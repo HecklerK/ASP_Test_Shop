@@ -4,10 +4,45 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div>
+    <header>
+    <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: red;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ASP_Test_Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Cars/List">Все машины</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ShopCart/">Корзина</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" spellcheck="false" data-ms-editor="true">
+                        <button class="btn btn-outline-light" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
         @RenderBody()
     </div>
+    <footer class="container mt-5">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2021 Все права защищены · <a href="#">Соглашения</a></p>
+  </footer>
+    <script src="~/js/bootstrap.js"></script>
 </body>
 </html>
